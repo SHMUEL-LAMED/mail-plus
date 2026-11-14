@@ -9,7 +9,7 @@ async function home(env,user,update=false){
  const result=await env.DB.prepare('SELECT id,title FROM gmail_addon_tasks WHERE owner=? AND done=0 ORDER BY created DESC LIMIT 30').bind(user.email).all();
  const widgets=[para('המשימות שלך נשמרות בענן. פתח הודעה כדי ליצור ממנה משימת מעקב.'),{textInput:{name:'title',label:'משימה חדשה',type:'SINGLE_LINE'}},button('הוסף משימה','/add')];
  for(const t of result.results||[]) widgets.push(para(esc(t.title)),button('סמן כבוצע','/done',{id:t.id}));
- widgets.push({buttonList:{buttons:[{text:'פתיחת כלי המייל המלאים',onClick:{openLink:{url:'https://shmuel-lamed.github.io/07/mail-plus/'}}}]}});
+ widgets.push({buttonList:{buttons:[{text:'פתיחת כלי המייל המלאים',onClick:{openLink:{url:'https://shmuel-lamed.github.io/mail-plus/'}}}]}});
  return card(widgets,update);
 }
 export default {async fetch(request,env){

@@ -2,7 +2,7 @@
 
 סביבת עבודה בעברית ל-Gmail, משימות בענן ותבניות תשובה.
 
-כתובת האתר: https://shmuel-lamed.github.io/07/mail-plus/
+כתובת האתר: https://shmuel-lamed.github.io/mail-plus/
 
 ## מבנה
 
@@ -18,7 +18,7 @@
 ## הרצה ובנייה
 
 בתיקיית mail-plus: `npm ci`, `npm run build`, `node frontend/build.mjs`, `node cloudflare/build.mjs`.
-העתק את docs/mail-plus לתיקיית docs/mail-plus בשורש המאגר לאחר בניית הלקוח. הפונקציה ב-supabase/functions/mail-plus-bridge כוללת אימות משלה ולכן verify_jwt של Supabase כבוי עבורה בלבד.
+העתק את התוכן של docs/mail-plus לתיקייה docs בשורש המאגר (GitHub Pages מתפרסם ממנה) לאחר בניית הלקוח. הפונקציה ב-supabase/functions/mail-plus-bridge כוללת אימות משלה ולכן verify_jwt של Supabase כבוי עבורה בלבד.
 
 בדיקות: `npx tsc --noEmit`, `node tests/api-check.cjs`, `node tests/google-auth-check.mjs`.
 
